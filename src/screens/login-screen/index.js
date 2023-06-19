@@ -7,7 +7,7 @@ import { useFormik } from 'formik';
 import { useAppDispatch } from 'hooks/use-store';
 import { navigate, resetStack } from 'navigation/navigation-ref';
 import React from 'react';
-import { ImageBackground, TouchableOpacity, View } from 'react-native';
+import { ImageBackground, TouchableOpacity, View ,Text} from 'react-native';
 
 import PrimaryInput from 'components/atoms/inputs';
 import { KeyboardAvoidScrollview } from 'components/atoms/keyboard-avoid-scrollview/index';
@@ -89,6 +89,7 @@ const LoginScreen = props => {
               containerStyle={{ marginBottom: 0 }}
               errorStyle={{ marginBottom: 0 }}
             />
+             
             <TouchableOpacity
               style={{ alignSelf: 'flex-end', marginBottom: mvs(15) }}
               onPress={() => navigate('ForgotPassword')}>

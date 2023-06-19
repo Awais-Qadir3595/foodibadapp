@@ -11,6 +11,13 @@ import Signup from 'screens/signup';
 import Splash from 'screens/splash';
 import { horizontalAnimation } from '../utils';
 import { TabBar } from './curvedtabs';
+//cart side
+import CartPreview from 'screens/cart-screens/cartPreview/cartPreview';
+import CartProceed from 'screens/cart-screens/cart-proceed/cart-Proceed';
+import AddNewPayment from 'screens/cart-screens/addNewPayment/addNewPayment';
+import CartCheckout from 'screens/cart-screens/cart-checkout/cartCheckout';
+import OrderNotificationCart from 'screens/cart-screens/orderNotificationCart/orderNotificationCart';
+import OrderStatus from 'screens/cart-screens/orderstatus/orderstatus';
 const Stack = createNativeStackNavigator();
 
 export const RootNavigator = () => {
@@ -21,9 +28,9 @@ export const RootNavigator = () => {
         translucent={false}
         backgroundColor={colors.primary}
         barStyle={'light-content'}
-      />
+      /> 
       <Stack.Navigator
-        initialRouteName="Splash"
+        initialRouteName="CartPreview"
         screenOptions={horizontalAnimation}>
         <Stack.Group>
           <Stack.Screen name="Splash" component={Splash} />
@@ -32,6 +39,15 @@ export const RootNavigator = () => {
           <Stack.Screen name="Notifications" component={Notifications} />
           <Stack.Screen name="LanguageScreen" component={LanguageScreen} />
         </Stack.Group>
+
+        {/* cart screens */}
+        <Stack.Screen name="CartPreview" component={CartPreview} />
+        <Stack.Screen name="CartProceed" component={CartProceed} />
+        <Stack.Screen name="AddNewPayment" component={AddNewPayment} />
+        <Stack.Screen name="CartCheckout" component={CartCheckout} />
+        <Stack.Screen name="OrderNotificationCart" component={OrderNotificationCart} />
+        <Stack.Screen name="OrderStatus" component={OrderStatus} />
+
         <Stack.Screen name="TabBar" component={TabBar} />
 
       </Stack.Navigator>
