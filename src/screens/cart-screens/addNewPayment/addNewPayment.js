@@ -27,6 +27,7 @@ const nextScreen=()=>{
   setModal(false);
   navigation.navigate('CartCheckout')
 }
+console.log(0);
     return(
    
         <View style={styles.main}> 
